@@ -39,10 +39,10 @@
                                 <td>{{$direct->apellido}}</td>
                                 <td>{{$direct->telefono}}</td>
                                 <td>
-                                    <a href="/verContacto/{{codigoEntrada}}" class="btn btn-info">Ver</a>
+                                    <a href="/verContacto/{{$direct->codigoEntrada}}" class="btn btn-info">Ver</a>
                                 </td>
                                 <td>
-                                    <a href="#" class="btn btn-danger">Eliminar</a>
+                                    <a href="/eliminarContacto/{{$direct->codigoEntrada}}" class="btn btn-danger">Eliminar</a>
                                 </td>
                             </tr>
                             @endforeach

@@ -28,11 +28,13 @@
             </thead>
             <tbody>                
                 <tr>
-                    <th scope="row">11</th>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>jdoe@gmail.com</td>
-                    <td>999</td>
+                  @foreach ($contactoElim as $cont)
+                  <th scope="row">11</th>
+                  <td>{{$cont->idContacto}}</td>
+                  <td>{{$cont->nombre}}</td>
+                  <td>{{$cont->apellido}}</td>
+                  <td>{{$cont->Telefono}}</td>
+                  @endforeach
                   </tr>
                 
               

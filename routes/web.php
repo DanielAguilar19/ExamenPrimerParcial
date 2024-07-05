@@ -27,8 +27,9 @@ Route::get('/agregarDirectorio/',
 Route::post('/salvarDirectorio/',
         [directorioController::class, 'salvarDirectorio'])->name('guardarEntrada');
 
-Route::get('/eliminarContacto/',[contactoController::class, 'eliminarContacto']);
-Route::delete('/confEliminar/',[contactoController::class,'confirmarEliminarContact'])->name('eliminarContacto');
+Route::get('/eliminarContacto/{$id}',[contactoController::class, 'eliminarContacto']);
 
+Route::delete('/confEliminar/{$id}',[contactoController::class,'confirmarEliminarContact'])->name('eliminarContacto');
 
+Route::get('/buscarCorreo/{$correo}',[directorioController::class,'buscarCorreo;']);
 

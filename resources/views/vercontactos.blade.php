@@ -52,7 +52,7 @@
 
                                     <p>
                                         <button class="btn btn-primary">Agregar nuevo contacto</button>
-                                        <a href="#" class="btn btn-info">Regresar</a>
+                                        <a href="/" class="btn btn-info">Regresar</a>
                                     </p>
 
                                     <table class="table">
@@ -65,13 +65,15 @@
                                         </thead>
                                         <tbody>
                                                 <tr>
-                                                    <td>1</td>                                                    
-                                                    <td>Julio</td>
-                                                    <td>Cortez</td>
-                                                    <td>9999</td>                                                    
-                                                    <td>
-                                                        <a href="#" class="btn btn-danger">Eliminar</a>
-                                                    </td>
+                                                  @foreach ($contacto as $item)
+                                                  <td>{{$item->idContacto}}</td>                                                    
+                                                  <td>{{$item->nombre}}</td>
+                                                  <td>{{$item->apellido}}</td>
+                                                  <td>{{$item->telefono}}</td>                                                    
+                                                  <td>
+                                                      <a href="/confEliminar/{{$item->idContacto}}" class="btn btn-danger">Eliminar</a>
+                                                  </td>
+                                                  @endforeach
                                                 </tr>
                                         </tbody>
 

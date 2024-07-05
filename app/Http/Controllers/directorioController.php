@@ -38,4 +38,8 @@ class directorioController extends Controller
 
             redirect('/');
     }
+    public function buscarCorreo($correo){
+        $directorio = directorio::where('correo',$correo);
+        return (compact($directorio));
+    }
 }

@@ -18,7 +18,7 @@ class contactoController extends Controller
         $contact->apellido = $req->apellido;
         $contact->correo = $req->correo;
         $contact->save();
-        redirect(route('/diretorios'));
+        redirect(route('/'));
     }
     public function eliminarContacto($id){
         $contactoElim = contacto::find($id);
@@ -29,7 +29,7 @@ class contactoController extends Controller
             $contacto = contacto::find($id);
             $contacto->delete();
 
-            redirect('/directorios');
+            redirect('/');
     }
 
     public function verContacto(){
